@@ -1,16 +1,13 @@
 export function groupAnagrams (words) {
-  const anagrams = {};
+  const hash = {};
   const result = [];
 
   for (const word of words) {
-    const arr = word.split('');
-    arr.sort((a, b) => a.localeCompare(b));
-    const key = arr.join('');
-    if (!anagrams.hasOwnProperty(key)) anagrams[key] = [];
-    anagrams[key].push(word);
+    const letters = word.split('').sort((a, b) => a.localeCompare(b));
+    hash[letters] ? hash[letters].push(word) : hash[letters] = [ word ];
   }
 
-  for (const value of Object.values(anagrams)) {
+  for (const value of Object.values(hash)) {
     value.sort((a, b) => a.localeCompare(b));
     result.push(value)
   }
