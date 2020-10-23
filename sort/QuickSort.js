@@ -10,6 +10,7 @@ function quickSort(list) {
         const num = list[i];
         (num < pivot) ? left.push(num) : right.push(num);
     }
+
     return [...quickSort(left), pivot, ...quickSort(right)]
 }
 

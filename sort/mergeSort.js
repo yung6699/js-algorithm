@@ -5,14 +5,10 @@
 */
 
 function mergeSort (arr) {
-  if (arr.length < 2) {
-    return arr;
-  }
-
+  if (arr.length < 2) return arr;
   let mid = Math.floor(arr.length / 2);
   let subLeft = mergeSort(arr.slice(0, mid));
   let subRight = mergeSort(arr.slice(mid));
-
   return merge(subLeft, subRight);
 }
 
