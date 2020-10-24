@@ -17,3 +17,16 @@ export function removeValueFromArray (array, removedValue) {
 export function isNumeric(num){
   return !isNaN(num)
 }
+
+// 최대값 구하기
+export function searchMax (array) {
+  return array.reduce((previous, current) => {
+    return previous > current ? previous:current;
+  });
+}
+// 최대값 구하기
+export function searchMin (array) {
+  return array.reduce((previous, current) => {
+    return previous > current ? previous:current;
+  });
+}
