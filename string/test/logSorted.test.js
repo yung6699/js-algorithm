@@ -12,4 +12,10 @@ describe("reorderLogFiles Function Test", () => {
     const result = ['1 A', '2 A', '1 B', '4 C'];
     expect(reorderLogFiles(logs)).toEqual(result)
   })
+
+  it('test 3', () => {
+    const logs = ["a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo","a2 act car"];
+    const result = ["a2 act car","g1 act car","a8 act zoo","ab1 off key dog","a1 9 2 3 1","zo4 4 7"];
+    expect(reorderLogFiles(logs)).toEqual(result)
+  })
 })

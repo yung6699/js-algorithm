@@ -12,7 +12,7 @@ export function reorderLogFiles (logs) {
 
   letters.sort((a, b) => {
     if (a.value !== b.value) return a.value.localeCompare(b.value);
-    return a.variable - b.variable
+    return a.variable.localeCompare(b.variable)
   });
 
   digits.sort((a, b) => a.idx - b.idx);
