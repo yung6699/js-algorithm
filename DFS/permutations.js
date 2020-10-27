@@ -3,25 +3,25 @@
 * */
 function permutations (list) {
   const result = [];
-  const temp = [];
 
-  function dfs (elements) {
-     if (elements.length === 0) {
-       result.push([ ...temp ]);
-       return;
-     };
+  function dfs (elements, arr) {
+     // if (elements.length === 0) {
+     //   result.push([ ...arr ]);
+     //   return;
+     // };
 
-     for (let element of elements) {
+    result.push([ ...arr ]);
+    if (!elements.length) return;
+
+    for (let element of elements) {
        const _elements = [ ...elements ];
        _elements.splice(_elements.indexOf(element), 1);
-       temp.push(element);
-       dfs(_elements);
-       temp.pop();
+       dfs(_elements, [...arr, element]);
      }
   }
 
-  dfs(list);
+  dfs(list, []);
   return result;
 }
 
-console.log(permutations([1,2,3]))
+console.log(permutations([1,2,3]));
