@@ -4,18 +4,15 @@
 function combination (list) {
   const results = [];
 
-  function dfs (elements, start, k) {
+  function dfs (start, elements, k) {
     if (k === 0) results.push([ ...elements ]);
     for (let i = start; i < list.length; i++) {
       const _elements = [ ...elements, list[i]];
-      dfs(_elements, i + 1, k - 1);
+      dfs(i + 1, _elements, k - 1);
     }
   }
 
-  for (let k = 0; k <= list.length; k++) {
-    dfs([], 0, k);
-  }
-
+  dfs(0, [], 2);
   return results;
 }
 

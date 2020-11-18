@@ -1,21 +1,17 @@
 function solution(numbers, target) {
-  var answer = 0;
-  const result = [];
+  let answer = 0;
 
-  function dfs (idx, _sum) {
-    const isEnd = idx === numbers.length;
-    if (_sum === target && isEnd) {
-      result.push(_sum);
+  function dfs (idx, sum) {
+    if (numbers.length === idx) {
+      if (sum === target) answer += 1;
       return;
     }
 
-    if (idx === numbers.length) return;
-
-    dfs(idx + 1, _sum + numbers[idx]);
-    dfs(idx + 1, _sum - numbers[idx]);
+    const firstNum = numbers[idx];
+    dfs(idx + 1, sum + (firstNum * 1))
+    dfs(idx + 1, sum + (firstNum * -1))
   }
 
   dfs(0, 0)
-
-  return result.length;
+  return answer;
 }

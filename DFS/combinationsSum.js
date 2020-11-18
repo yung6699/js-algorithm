@@ -2,7 +2,6 @@ function combinationsSum (candidates, target) {
   const results = [];
 
   function dfs (csum, idx, elements) {
-    console.log('csum', csum)
     if (csum < 0 ) return;
 
     if (csum === 0 ) {
@@ -20,5 +19,5 @@ function combinationsSum (candidates, target) {
   return results;
 }
 
-// console.log(combinationsSum([ 2, 3, 6, 7], 7))
-console.log(combinationsSum([1,0,-1,0,-2,2], 0))
+console.log(combinationsSum([ 2, 3, 6, 7], 7))
+// console.log(combinationsSum([1,0,-1,0,-2,2], 0))
