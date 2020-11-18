@@ -14,8 +14,12 @@ function solution (str) {
 }
 
 function solution2 (str) {
-  let left = 0, right = 0, longest = 0;
+  let left = 0;
+  let right = 0;
+  let longest = 0;
   let set = new Set();
+
+
 
   while (left < str.length && right < str.length) {
 
@@ -29,11 +33,10 @@ function solution2 (str) {
     }
   }
 
-  console.log('longest', longest)
   return longest;
 }
 
 
-solution2('abcabcbb')
+solution2('abcaacbb')
 solution2('bbbb')
 solution2('pwwkew')
