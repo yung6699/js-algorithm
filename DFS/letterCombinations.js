@@ -11,13 +11,11 @@ function letterCombinations (digits) {
       return;
     }
 
-    for (let i = idx; i < digits.length; i++) {
-      for (let char of dic[digits[i]].split('')) {
-        dfs(i + 1, path + char);
-      }
+    const list = dic[digits[idx]];
+    for (let i = 0; i < list.length; i++) {
+      dfs(idx + 1, path + list[i]);
     }
   }
-
 
   dfs(0, '');
   return results;

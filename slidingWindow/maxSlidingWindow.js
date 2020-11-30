@@ -13,7 +13,7 @@ var maxSlidingWindow = function(nums, k) {
     results.push(maxNumber);
 
     const firstElement = queue.shift();
-    if (maxNumber === firstElement)  maxNumber = initNum;
+    if (maxNumber === firstElement) maxNumber = initNum;
 
   }
 
