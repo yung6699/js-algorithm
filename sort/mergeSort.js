@@ -14,10 +14,18 @@ function mergeSort (arr) {
 
 function merge (node1, node2) {
   const result = [];
-  while (node1.length > 0 && node2.length > 0)
+  while (node1.length && node2.length)
     result.push(node1[0] < node2[0]? node1.shift() : node2.shift());
   return result.concat(node1.length? node1 : node2);
 }
+
+
+// function merge (node1, node2) {
+//   const result = [];
+//   while (node1.length > 0 && node2.length > 0)
+//     result.push(node1[0] < node2[0]? node1.shift() : node2.shift());
+//   return result.concat(node1.length? node1 : node2);
+// }
 
 
 const array = [ 1233, 5, 7, 3129, 1, 2, 434, 6, 8, 0 ];

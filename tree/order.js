@@ -34,6 +34,6 @@ function solution (tree) {
 }
 
 // const array = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'];
-// const array = [null, 1, 2, 3, 4, 5, 6];
-const array = [null, 3, 9, 20, null, null, 15, 7];
+const array = [null, 1, 2, 3, 4, 5, 6];
+// const array = [null, 3, 9, 20, null, null, 15, 7];
 solution(array);

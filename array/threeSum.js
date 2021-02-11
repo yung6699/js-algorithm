@@ -1,6 +1,6 @@
 /*
-* 배열을 입력 받아 합으로 0을 만들어라.
-* */
+ * 배열을 입력 받아 합으로 0을 만들어라.
+ * */
 
 function treeSum(nums) {
   const result = [];
@@ -14,7 +14,7 @@ function treeSum(nums) {
 
     while (left < right) {
       const sum = nums[idx] + nums[left] + nums[right];
-
+      /*  */
       if (sum < 0) left += 1;
       if (sum > 0) right -= 1;
       if (sum === 0) {
@@ -29,8 +29,7 @@ function treeSum(nums) {
     }
   }
 
-
-  return result
+  return result;
 }
 
 console.log(treeSum([-4, -1, -1, 0, 1, 2]));

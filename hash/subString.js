@@ -18,9 +18,7 @@ function solution2 (str) {
   let right = 0;
   let longest = 0;
   let set = new Set();
-
-
-
+  
   while (left < str.length && right < str.length) {
 
     if (!set.has(str[right])) {
